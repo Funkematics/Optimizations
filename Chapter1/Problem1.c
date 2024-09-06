@@ -91,7 +91,7 @@ int main()
      // printf("output : %f\n", out); 
       if(i != 0) {
         out = duke_newton(guess, h, EPSILON, 6);
-        printf("feasible x: %f        y: %f\n" , out, f(out));
+        printf("feasible x: %.5f        y: %.5f\n" , out, f(out));
       }
     }
       

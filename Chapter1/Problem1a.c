@@ -3,15 +3,22 @@
 #include <stdint.h>
 #include <stdbool.h>
 
+//----------------------INTERFACE-------------------------
 #define MIN 0.0
 #define MAX 2.0
 #define STEP 0.000005
 #define EPSILON 1e-6
+#define STORAGE 100
 
 double f(double x)
 {
     return pow((pow(x, 2) + sin(x)), 2) - 10 * (cos(5 * x) + (3.0/2.0) * x);
 }
+//----------------------------------------------------------
+//The above block is where we determine our range in MIN and MAX, our epsilon, steps,
+//max storage size for extrema, this will be replaced with a dynamic memory, and finally
+//our input function
+
 //derivative using central finite differences
 double deriv(double x, double h)
 {
@@ -32,6 +39,7 @@ bool signCheck(double prev, double curr)
     return false;
 }
 
+//Newtons Method for finding critical points
 double duke_newton(double x0, double h, double tolerance, int max_iterations)
 {
   double x = x0;
@@ -49,25 +57,45 @@ double duke_newton(double x0, double h, double tolerance, int max_iterations)
   return x_new;
 }
 
+
 int main()
 {
-    double h = 1e-6;
+    double h = EPSILON; //Just for notational convenience
     double x;
-    int inflections = 1;  //We set it to 1 because we are expecting continuous functions
-                     // non linear function
-    double prev_deriv = secderiv(MIN, h); // Start with the first value
+    int inflectionscount = 1;  // This is more of a count of convexities or concavity.
 
-    for (x = MIN; x <= MAX; x += STEP) {
+    int i = 0;         //index
+    double inflections[STORAGE];
+    inflections[i] = MIN;
+    ++i;
+
+    // Here we find inflections/concavities/convexities and put our data in an array.
+    double prev_deriv = secderiv(MIN, h);       // Start with the first value
+    for (x = MIN; x <= MAX; x += STEP) {        
         double curr_deriv = secderiv(x, h);
-        if (signCheck(prev_deriv, curr_deriv)) {
-            ++inflections;
-            printf("point : %f\n", x);
+        if (signCheck(prev_deriv, curr_deriv)) { 
+            ++inflectionscount;
+            inflections[i] = x;
+            i++;
+            //printf("point : %f\n", x);
         }
         prev_deriv = curr_deriv;
         //printf("second deriv x = %f, f(x)'' = %Lf\n", x, secderivrx, h));
     }
-    double guesses[inflections];
-    printf("curves : %d\n", inflections);
-    printf("root 1: %f\n", duke_newton(1.255, h, EPSILON, 6));
+    inflections[i]  = MAX;
+
+    double guess;
+    double out;
+    for(i = 0; i <= inflectionscount; i++) {
+      guess = (inflections[i] + inflections[i-1]) / 2;
+     // printf("output : %f\n", out); 
+      if(i != 0) {
+        out = duke_newton(guess, h, EPSILON, 6);
+        printf("feasible x: %f        y: %f\n" , out, f(out));
+      }
+    }
+      
+
+    printf("curves : %d\n", inflectionscount);
     return 0;
 }

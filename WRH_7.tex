@@ -41,28 +41,53 @@ Because our objective function is linear, the local minimizer and the global min
 \break
 \textbf{Problem 2.5:} In this exercise we are tasked with providing an example function that nas no global minimizer and no global maximizer. If we take any linear function without constraints we will have no global minimizer or maximizer. The function $f(x) = x_1$ for example.
 \break \break
-\textbf{Problem 2.7:} Theorem: Given $f(x)$ for $x \in S$ and $S$ is the set of all integers, Every point in $S$ is a local minimizer in $f$.
+\textbf{Problem 2.7:} \underline{Theorem:} Given $f(x)$ for $x \in S$ and $S$ is the set of all integers, Every point in $S$ is a local minimizer in $f$.
 \newline
-Proof: First note that since $x \in S$, then $x-1$ and $x+1$ must also be in S.  Suppose x is a local minimizer, replacing x with the values of $x-1$ or $x+1$ should yield us values greater than $f(x)$. Then we know that $f(x) \leq f(x+1)$ and $f(x) \leq f(x-1)$ by definition of local minimizer. 
+\underline{Proof:} First note that since $x \in S$, then $x-1$ and $x+1$ must also be in S.  Suppose x is a local minimizer, replacing x with the values of $x-1$ or $x+1$ should yield us values greater than $f(x)$. Then we know that $f(x) \leq f(x+1)$ and $f(x) \leq f(x-1)$ by definition of local minimizer. 
 \break \break
-\textbf{Problem 3.1:} Theorem: The intersection of a finite number of convex sets is also a convex set.
-\newline Proof: Suppose $S$ is the intersection of a finite number of convex sets and $S \subseteq \mathbb{R}^n$. We will show that $S$ is also convex. Let $G_1, G_2, ... , G_n$ be convex sets where $G_1, G_2, ... , G_n = S$, let $x, y \in S$ and $\alpha \in [0,1]$. We want to show that $\alpha x + (1-\alpha)y \in S$, Since $x,y \in S$, then $x,y \in G_i$ for all $i$ in $ \{1, 2, ..., n\} $. This would mean that $\alpha x + (1 - x)y$ is in $G_i$ for all $i$ in $\{1,2,...,n\}$. Thus $\alpha x + (1 - x)y \in S$, therefore proving that the interesection of a finite number of convex sets is itself convex.
+\textbf{Problem 3.1:} \underline{Theorem:} The intersection of a finite number of convex sets is also a convex set.
+\newline \underline{Proof:} Suppose $S$ is the intersection of a finite number of convex sets and $S \subseteq \mathbb{R}^n$. We will show that $S$ is also convex. Let $G_1, G_2, ... , G_n$ be convex sets where $G_1, G_2, ... , G_n = S$, let $x, y \in S$ and $\alpha \in [0,1]$. We want to show that $\alpha x + (1-\alpha)y \in S$, Since $x,y \in S$, then $x,y \in G_i$ for all $i$ in $ \{1, 2, ..., n\} $. This would mean that $\alpha x + (1 - x)y$ is in $G_i$ for all $i$ in $\{1,2,...,n\}$. Thus $\alpha x + (1 - x)y \in S$, therefore proving that the interesection of a finite number of convex sets is itself convex.
 \break
 \break
-\textbf{Problem 3.3:} Theorem: Given the feasible region S defined by a set of linear constraints
+\textbf{Problem 3.3:} \underline{Theorem:} Given the feasible region S defined by a set of linear constraints
 \begin{align*}
     S = \{ x : Ax \leq b \}
 \end{align*}
 $S$ is convex.
-\newline Proof: For a $S$ to be convex then $S$ must satisfy $x,y \in S$ and $\alpha x + (1 - \alpha) \in S$ where $\alpha \in [0,1]$, also $S$ is a subset of $\mathbb{R}^n$.  Suppose $Ax \leq b$ and $Ay \leq b$, we consider the following:
+\newline \underline{Proof:} For a $S$ to be convex then $S$ must satisfy $x,y \in S$ and $\alpha x + (1 - \alpha) \in S$ where $\alpha \in [0,1]$, also $S$ is a subset of $\mathbb{R}^n$.  Suppose $Ax \leq b$ and $Ay \leq b$, we consider the following:
 \begin{align*}
     A(\alpha x + (1 - \alpha)y) & = A\alpha x + (1 - \alpha)Ay \\
     & \leq \alpha b + (1 - \alpha)b \\
     & \leq \alpha b + b - \alpha b \\
-    & \leq  
+    & \leq b 
 \end{align*}
 This shows that our region S defined by a set of set of linear constraints $S = \{ x : Ax \leq b \}$ is convex.
 \break
 \break
-\textbf{Problem 3.7:}
+\textbf{Problem 3.7:} \underline{Theorem:} Let $f$ be a convex function on a convex set $S \in \mathbb{R}^n$. Let $k$ be a nonzero scalar and define $g(x) = kf(x)$. If  $k > 0$, then $g$ is a concave function on set $S$, if $k < 0$, then $g$ is a concave function on set $S$.
+\newline \underline{Proof for $k > 0$:} We start with the case of $k > 0$, in order to show convexity we need to show that $g(\alpha x + (1 - \alpha)y)  \leq \alpha g(x) + (1 - \alpha)g(y)$. Substituting $g(x)$ with $kf(x)$ we consider the following using the definition of convexity:
+\begin{align*}
+    kf(\alpha x + (1 - \alpha)y) & \leq \alpha kf(x) + (1 - \alpha)kf(y) \\ 
+    & \leq k(\alpha f(x) + (1 - \alpha)f(y)) 
+\end{align*}
+Since $k > 0$ we can divide both sides by k and retain signage giving us
+\begin{align*} 
+    f(\alpha x + (1 - \alpha)y) \leq \alpha f(x) + (1 - \alpha)f(y)
+\end{align*}
+Which is the very definition of convexity. \newline
+\underline{Proof for $k < 0$:} Lets suppose $k < 0$, we can show cocavity with the following, note that since k is negative we flip the sign:
+\begin{align*}
+    kf(\alpha x + (1 - \alpha)y) & \geq \alpha kf(x) + (1 - \alpha)kf(y) \\
+    & \geq k(\alpha f(x) + (1 - \alpha)f(y)) \\
+    & \geq \alpha f(x) + (1 - \alpha)f(y)
+\end{align*}
+Thus showing that when $k > 0$, $g$ is convex and when $k < 0$, $g$ concave.
+\break
+\break
+\textbf{Problem 3.13:} \underline{Theorem:} If $f$ is a convex function on the convex set $S$ then the level set
+\begin{align*}
+    T = \{ x \in S : f(x) \leq k \}
+\end{align*}
+is convex for all real number $k$. \newline
+\underline{Proof:}
 \end{document}

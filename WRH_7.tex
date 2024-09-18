@@ -54,5 +54,15 @@ Proof: First note that since $x \in S$, then $x-1$ and $x+1$ must also be in S. 
     S = \{ x : Ax \leq b \}
 \end{align*}
 $S$ is convex.
-\newline Proof:
+\newline Proof: For a $S$ to be convex then $S$ must satisfy $x,y \in S$ and $\alpha x + (1 - \alpha) \in S$ where $\alpha \in [0,1]$, also $S$ is a subset of $\mathbb{R}^n$.  Suppose $Ax \leq b$ and $Ay \leq b$, we consider the following:
+\begin{align*}
+    A(\alpha x + (1 - \alpha)y) & = A\alpha x + (1 - \alpha)Ay \\
+    & \leq \alpha b + (1 - \alpha)b \\
+    & \leq \alpha b + b - \alpha b \\
+    & \leq  
+\end{align*}
+This shows that our region S defined by a set of set of linear constraints $S = \{ x : Ax \leq b \}$ is convex.
+\break
+\break
+\textbf{Problem 3.7:}
 \end{document}

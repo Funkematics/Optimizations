@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023 Gentoo Linux) (preloaded format=pdflatex 2024.7.28)  18 SEP 2024 09:25
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023 Gentoo Linux) (preloaded format=pdflatex 2024.7.28)  18 SEP 2024 12:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -626,30 +626,51 @@ Underfull \hbox (badness 10000) in paragraph at lines 83--88
 
  []
 
-[2] (build/WRH_7.aux)
+[2]
+Underfull \hbox (badness 10000) in paragraph at lines 98--104
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 128--137
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 128--137
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 143--148
+
+ []
+
+[3] [4] (build/WRH_7.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 15191 strings out of 476182
- 294664 string characters out of 5796232
- 1938975 words of memory out of 5000000
- 36936 multiletter control sequences out of 15000+600000
+ 15195 strings out of 476182
+ 294776 string characters out of 5796232
+ 1943975 words of memory out of 5000000
+ 36940 multiletter control sequences out of 15000+600000
  560429 words of font info for 46 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 84i,12n,87p,638b,260s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 84i,14n,87p,638b,260s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-r7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/s
-hare/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on build/WRH_7.pdf (2 pages, 121073 bytes).
+texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/s
+hare/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dis
+t/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on build/WRH_7.pdf (4 pages, 135719 bytes).
 PDF statistics:
- 52 PDF objects out of 1000 (max. 8388607)
- 31 compressed objects within 1 object stream
+ 63 PDF objects out of 1000 (max. 8388607)
+ 38 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  18 words of extra memory for PDF output out of 10000 (max. 10000000)
 

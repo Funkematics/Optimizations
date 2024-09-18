@@ -64,7 +64,7 @@ $S$ is convex.
 This shows that our region S defined by a set of set of linear constraints $S = \{ x : Ax \leq b \}$ is convex.
 \break
 \break
-\textbf{Problem 3.7:} \underline{Theorem:} Let $f$ be a convex function on a convex set $S \in \mathbb{R}^n$. Let $k$ be a nonzero scalar and define $g(x) = kf(x)$. If  $k > 0$, then $g$ is a concave function on set $S$, if $k < 0$, then $g$ is a concave function on set $S$.
+\textbf{Problem 3.7:} \underline{Theorem:} Let $f$ be a convex function on a convex set $S \in \mathbb{R}^n$. Let $k$ be a nonzero scalar and define $g(x) = kf(x)$, we also let $x,y \in \mathbb{R}$ and $\alpha \in [0,1]$. If  $k > 0$, then $g$ is a concave function on set $S$, if $k < 0$, then $g$ is a concave function on set $S$.
 \newline \underline{Proof for $k > 0$:} We start with the case of $k > 0$, in order to show convexity we need to show that $g(\alpha x + (1 - \alpha)y)  \leq \alpha g(x) + (1 - \alpha)g(y)$. Substituting $g(x)$ with $kf(x)$ we consider the following using the definition of convexity:
 \begin{align*}
     kf(\alpha x + (1 - \alpha)y) & \leq \alpha kf(x) + (1 - \alpha)kf(y) \\ 
@@ -89,5 +89,63 @@ Thus showing that when $k > 0$, $g$ is convex and when $k < 0$, $g$ concave.
     T = \{ x \in S : f(x) \leq k \}
 \end{align*}
 is convex for all real number $k$. \newline
-\underline{Proof:}
+\underline{Proof:} Let there be an $x,y \in S$ such that $f(x) \leq k$, $f(y) \leq k$ and $\alpha \in [0,1]$ We begin with out convexity definition:
+\begin{align*}
+    f(\alpha x + (1 - \alpha)y) & \leq \alpha f(x) + (1 - \alpha)f(y) \\
+    & \leq \alpha k + (1 - \alpha)k \\
+    & \leq \alpha k + k - \alpha k \\
+    & \leq k
+\end{align*}
+This is sufficient in showing convexity.
+\newline
+\break
+\textbf{Problem 3.18:} $(2,2)^T$ can be expressed as a convex combination of $(0, 0)^T$, $(1,4)^T$ and $(3,1)^T$, \\
+What we ultimately mean to solve for the coefficients of the system of equations:
+\begin{align*}
+    \lambda_1(0) + \lambda_2(1) + \lambda_3(3) = 2 \\
+    \lambda_1(0) + \lambda_2(4) + \lambda_3(1) = 2
+\end{align*}
+We solve below:
+\begin{align}
+    \begin{bmatrix}
+        0 & 1 & 3 \\
+        0 & 4 & 1
+    \end{bmatrix}
+    = (2,2)^T & \Rightarrow 
+    \begin{bmatrix}
+        0 & 1 & 3 & 2 \\
+        0 & 4 & 1 & 2   
+    \end{bmatrix} \\ 
+    & \Rightarrow
+    \begin{bmatrix}
+        0 & 1 & 3 & 2 \\
+        0 & 0 & -11 & -6 
+    \end{bmatrix} & \text{multiply top row by -4, add to bottom row } \\ & \Rightarrow
+    \begin{bmatrix}
+        0 & 1 & 3 & 2 \\
+        0 & 0 & 1 & 6/11
+    \end{bmatrix} & \text{divide bottom row by -11}
+\end{align}
+We plug $6/11$ into the top row of our matrix $(3)$ and we get $(2,2)^T = n(0, 0)^T + \frac{4}{11}(1,4)^T + \frac{6}{11}(3,1)^T$
+for any $n \in \mathbb{R}$.
+\newline
+\break
+\textbf{Problem P5:} For the following functions we determine if the function is convex, concave, both or neither, for the following functions we let $x,y \in \mathbb{R}$ and $\alpha \in [0,1]$ and we use the definition of convexity $f(\alpha x + (1 - \alpha)y) \leq \alpha f(x) + (1 - \alpha)f(y)$ and concavity: $f(\alpha x + (1 - \alpha)y) \geq \alpha f(x) + (1 - \alpha)f(y)$.
+\newline
+\break
+(a) - \underline{$f(x) = 9x - 14$} \qquad First we evaluate $f(\alpha x + (1 - \alpha)y) = 9(\alpha x + (1 - \alpha)y) - 14  \\ = 9 \alpha x + 9y - 9 \alpha y - 14$ and substitute for our lefthand side, we then evaluate the righthand side. 
+\begin{align*}
+    9 \alpha x + 9y - 9 \alpha y - 14 & \leq \alpha f(x) + (1 - \alpha)f(y) \\
+    & \leq \alpha (9x-14) + (1 - \alpha)(9y-14) \\
+    & \leq \alpha (9x-14) + (9y - 9y \alpha - 14 + 14 \alpha) \\
+    & \leq 9x \alpha - 14 \alpha + 9y - 9y \alpha - 14 + 14 \alpha \\
+    & \leq 9x \alpha + 9y - 9 \alpha y - 14
+\end{align*}
+As it turns out the left hand side is equal to the right hand side meaning that f(x) is convex, incidentally if we flip the sign the inequality would still be true, thus f(x) is both concave and convex.
+\newline
+\break
+(b) - \underline{$f(x) = (1/3+x^4)$} \qquad Like the previous problem, we evaluate: $f(\alpha x + (1 - \alpha)y) \newline = 1/3 + (\alpha x + (1 - a)y)^4$.
+\begin{align*}
+    1/3 + (\alpha x + (1 - a)y)^4 & \leq \alpha f(x) + (1 - \alpha)f(y)
+\end{align*}
 \end{document}

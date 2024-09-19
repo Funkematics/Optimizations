@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1726550772.86731 "Opt1.tex" "build/Opt1.pdf" "Opt1" 1726550773.08278 0
+["pdflatex"] 1726704697.47557 "Opt1.tex" "build/Opt1.pdf" "Opt1" 1726704697.69222 0
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1246382020 916 f87d7c45f9c908e672703b83b72241a3 ""
@@ -118,7 +118,7 @@
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1722185430.34591 327402 6410649c3b72c4c0d98fe7cc3f3648f3 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1722185407 6800596 54f1918a1090a3f17a9b3c10811a6409 ""
   "Opt1.tex" 1726542260.3013 1381 b190f2ce84ab4ece13ab8373740ae1e8 ""
-  "build/Opt1.aux" 1726550773.05212 130 db6f5260f1c5c1d08b6b586f6643569c "pdflatex"
+  "build/Opt1.aux" 1726704697.66113 130 db6f5260f1c5c1d08b6b586f6643569c "pdflatex"
   (generated)
   "build/Opt1.aux"
   "build/Opt1.log"

@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1726691180.37476 "WRH_7.tex" "build/WRH_7.pdf" "WRH_7" 1726691180.64602 0
+["pdflatex"] 1726704698.03627 "WRH2.tex" "build/WRH2.pdf" "WRH2" 1726704698.31243 0
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1246382020 916 f87d7c45f9c908e672703b83b72241a3 ""
@@ -15,8 +15,11 @@
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb" 1248133631 36299 5f9df58c2139e7edcf37c8fca4bd384d ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb" 1248133631 36281 c355509802a035cadc5f15869451dcee ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1248133631 35752 024fb6c41858982481f6968b5fc26508 ""
+  "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb" 1248133631 31809 8670ca339bf94e56da1fc21c80635e2a ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb" 1248133631 32762 224316ccc9ad3ca0423a14971cfa7fc1 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1248133631 32569 5e5ddc8df908dea60932f3c484a54c0d ""
+  "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb" 1248133631 32716 08e384dc442464e7285e891af9f45947 ""
+  "/usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb" 1248133631 31764 459c573c03a4949a528c2cc7f557e217 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb" 1248133631 34694 ad62b13721ee8eda1dcc8993c8bd7041 ""
   "/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1461363279 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "/usr/share/texmf-dist/tex/generic/iftex/iftex.sty" 1644112042 7237 bdd120a32c8fdb4b433cf9ca2e7cd98a ""
@@ -121,11 +124,11 @@
   "/usr/share/texmf-site/tex/latex/pgf/utilities/pgfrcs.sty" 1722184320.04257 325 f9f16d12354225b7dd52a3321f085955 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1722185430.34591 327402 6410649c3b72c4c0d98fe7cc3f3648f3 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1722185407 6800596 54f1918a1090a3f17a9b3c10811a6409 ""
-  "WRH_7.tex" 1726691178.20746 8009 d31f9b79d548cec5433829696d066fd7 ""
-  "build/WRH_7.aux" 1726691180.61081 32 c81c40425fbb5e93b90fba65da0b5e61 "pdflatex"
+  "WRH2.tex" 1726696057.4619 10171 3bfa17dd503f973383e15d3443942269 ""
+  "build/WRH2.aux" 1726704698.27447 32 2d1df76398b3c48c6419a45a7331db2d "pdflatex"
   "desmos1.png" 1726550411.86916 84769 35a8162ba93aa6b0d601c2cb8fd1b245 ""
   (generated)
-  "build/WRH_7.aux"
-  "build/WRH_7.log"
-  "build/WRH_7.pdf"
+  "build/WRH2.aux"
+  "build/WRH2.log"
+  "build/WRH2.pdf"
   (rewritten before read)

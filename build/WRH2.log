@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023 Gentoo Linux) (preloaded format=pdflatex 2024.7.28)  18 SEP 2024 12:26
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023 Gentoo Linux) (preloaded format=pdflatex 2024.7.28)  18 SEP 2024 16:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**WRH_7.tex
-(./WRH_7.tex
+**WRH2.tex
+(./WRH2.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
 (/usr/share/texmf-dist/tex/latex/base/article.cls
@@ -492,8 +492,8 @@ File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count303
 \l__pdf_internal_box=\box67
 )
-(build/WRH_7.aux)
-\openout1 = `WRH_7.aux'.
+(build/WRH2.aux)
+\openout1 = `WRH2.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
 LaTeX Font Info:    ... okay on input line 20.
@@ -611,14 +611,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 39--53
 
  <./desmos1.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 63--69
+\U/msa/m/n/10 ^^D$ 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 63--69
 
  []
 
 
-Underfull \hbox (badness 2600) in paragraph at lines 83--88
+Underfull \hbox (badness 1648) in paragraph at lines 83--88
 \OT1/cmr/m/n/10 Thus show-ing that when $\OML/cmm/m/it/10 k > \OT1/cmr/m/n/10 0
 $, $\OML/cmm/m/it/10 g$ \OT1/cmr/m/n/10 is con-vex and when $\OML/cmm/m/it/10 k
- < \OT1/cmr/m/n/10 0$, $\OML/cmm/m/it/10 g$ \OT1/cmr/m/n/10 con-cave. 
+ < \OT1/cmr/m/n/10 0$, $\OML/cmm/m/it/10 g$ \OT1/cmr/m/n/10 con-cave. $\U/msa/m
+/n/10 ^^D$ 
  []
 
 
@@ -646,31 +652,44 @@ Underfull \hbox (badness 10000) in paragraph at lines 143--148
 
  []
 
-[3] [4] (build/WRH_7.aux)
+[3]
+Underfull \hbox (badness 10000) in paragraph at lines 152--157
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 161--166
+
+ []
+
+[4] [5] (build/WRH2.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 15195 strings out of 476182
- 294776 string characters out of 5796232
+ 15197 strings out of 476182
+ 294818 string characters out of 5796232
  1943975 words of memory out of 5000000
- 36940 multiletter control sequences out of 15000+600000
+ 36942 multiletter control sequences out of 15000+600000
  560429 words of font info for 46 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 84i,14n,87p,638b,260s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 84i,14n,87p,637b,260s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/publi
 c/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/s
-hare/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dis
-t/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on build/WRH_7.pdf (4 pages, 135719 bytes).
+mr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/s
+hare/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/s
+ymbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/ms
+bm10.pfb>
+Output written on build/WRH2.pdf (5 pages, 163978 bytes).
 PDF statistics:
- 63 PDF objects out of 1000 (max. 8388607)
- 38 compressed objects within 1 object stream
+ 81 PDF objects out of 1000 (max. 8388607)
+ 49 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  18 words of extra memory for PDF output out of 10000 (max. 10000000)
 

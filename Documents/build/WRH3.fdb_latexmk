@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1727396158.27234 "WRH3.tex" "build/WRH3.pdf" "WRH3" 1727396158.53075 0
+["pdflatex"] 1727504743.10998 "WRH3.tex" "build/WRH3.pdf" "WRH3" 1727504743.36329 0
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1246382020 916 f87d7c45f9c908e672703b83b72241a3 ""
@@ -129,8 +129,8 @@
   "/usr/share/texmf-site/tex/latex/pgf/utilities/pgfrcs.sty" 1722184320.04257 325 f9f16d12354225b7dd52a3321f085955 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1722185430.34591 327402 6410649c3b72c4c0d98fe7cc3f3648f3 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1722185407 6800596 54f1918a1090a3f17a9b3c10811a6409 ""
-  "WRH3.tex" 1727396156.9113 13543 0d7ca7dc0f2bafa21dc9dfef8849d852 ""
-  "build/WRH3.aux" 1727396158.49131 32 77e0dffd05b653a64f0caf3eb9bb454a "pdflatex"
+  "WRH3.tex" 1727398731.3202 13941 7e495206d691c6c261c13a6ce4016511 ""
+  "build/WRH3.aux" 1727504743.32202 32 77e0dffd05b653a64f0caf3eb9bb454a "pdflatex"
   "desmos2.png" 1727244545.76088 16841 045f07a8c236b3ebba32d43ad09e0587 ""
   (generated)
   "build/WRH3.aux"

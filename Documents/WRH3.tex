@@ -28,7 +28,7 @@ In this problem we explore descent directions for the linear function $f(x) = x_
 \begin{align*}
     \nabla f(x) = \begin{bmatrix} 1 \\ -2 \\ 3 \end{bmatrix}
 \end{align*}
-We let d be the dscent direction
+The descent direction is any direction that satisfies $\nabla f(x) * d < 0$ where d is a direction. Plugging in our values for our gradient we get $1d_1 - 2d_2 + 3d_3 < 0$. Note the absence of any $x$ variables, meaning our answer does not depend on our value of $x$, it must only satisfy the inequality, in our case: $1d_1 - 2d_2 + 3d_3 < 0$. This should be true for all linear functions or constant gradient.
 
 \textbf{Problem 4.3:} Consider the following problem: 
 \begin{align*}
@@ -48,13 +48,13 @@ We will do the following: \newline \setlength\parindent{24pt}
 \begin{align*}
     \bar{x} = (0,0)^T: &\null \quad \{p \in \mathbb{R}^2 | p_1 \geq 0, p_2 \geq 0 \} \\
     \bar{x} = (0,1)^T: &\null \quad \{p \in \mathbb{R}^2 | p_1 \geq 0, p_1 \leq 1 \} \\
-    \bar{x} = (1,1)^T: &\null \quad \{p \in \mathbb{R}^2 | p_1 + p_2 \leq 0 \} \\
-    \bar{x} = (0,2)^T: &\null \quad \{p \in \mathbb{R}^2 | p_1 + p_2 \leq 2 \}, \text{ where } \{p_2 \leq 0\}\\
+    \bar{x} = (1,1)^T: &\null \quad \{p \in \mathbb{R}^2 | p_1 \leq 1,  p_2 \leq 1 \} \\
+    \bar{x} = (0,2)^T: &\null \quad \{p \in \mathbb{R}^2 | p_1 \geq 0, p_2 \leq 2 \} \\
 \end{align*}
 \indent \textbf{\{ii\}} \newline For the point $(0,0)^T$, every direction $p_1 \geq 0$ and $p_2 \geq 0$ is a feasible descent direction. Its not a local minimizer. \newline
-For the point $(0,1)^T$, there are feasible directions if $0 \leq p_1 \leq 1$ and $p_2 $, not a local minimizer. \newline
-For point $(1,1)$, there are no feasible directions, this is actually the global minimizer \newline
-For point $(0,2)$ there are no feasible directions  \newline
+For the point $(0,1)^T$, there are feasible directions if $0 \leq p_1 $ such that $p_1 + p_2 \leq 2$, not a local minimizer. \newline
+For point $(1,1)$, there are no feasible descent directions, this is local minimizer \newline
+For point $(0,2)$ there are no feasible descent directions, also a local minimizer \newline
 
 \noindent
 \textbf{Problem 6.4:} We find the first three terms of the taylor series at point $x_0 = (1,-1)^T$ for:

@@ -1,0 +1,37 @@
+\documentclass{article}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{tikz}
+\usepackage{parskip}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{fancyhdr}
+\usepackage[%paperheight = 59.4cm,
+            %paperwidth = 42cm,
+            %includehead,
+            nomarginpar,
+            textwidth=15cm,
+            headheight=10mm]{geometry}
+
+
+\begin{document}
+ 
+\pagestyle{fancy}
+%\fancyhead{}\fancyfoot{}
+
+\fancyhf[OHC]{Christopher Munoz WRH3 Optimization}
+\textbf{Problem 2.2:} \\
+Theorem: Let $Z$ be an $n$ x $r$ null-space matrix for the matrix $A$. If $Y$ is any invertible $r$ x $r$ matrix,  $\hat{Z} = ZY$ is also a null-space matrix for A.
+
+Proof: Given that Z is an $n$ x $r$ null-space matrix for matrix $A$, we know that $AZ = 0$, we also know that $Y$ is an invertible matrix. We need to show that $A\hat{Z} = 0$ or $AZY = 0$ for $\hat{Z} = ZY$ to be a null-space matrix for A. Consider the following:
+\begin{align*}
+    A \hat{Z} = A(ZY) \\
+    A(ZY) = (AZ)Y \\
+    A(ZY) = 0Y \\
+    AZY = 0 \text{ or } A\hat{Z} = 0
+\end{align*}
+Thus proving $\hat{Z} = ZY$ is also a null-space matrix for A.
+\end{document}

@@ -22,7 +22,7 @@
 \pagestyle{fancy}
 %\fancyhead{}\fancyfoot{}
 
-\fancyhf[OHC]{Christopher Munoz WRH3 Optimization}
+\fancyhf[OHC]{Christopher Munoz WRH4 Optimization}
 \textbf{Problem 2.2:} \\
 Theorem: Let $Z$ be an $n$ x $r$ null-space matrix for the matrix $A$. If $Y$ is any invertible $r$ x $r$ matrix,  $\hat{Z} = ZY$ is also a null-space matrix for A.
 
@@ -33,5 +33,31 @@ Proof: Given that Z is an $n$ x $r$ null-space matrix for matrix $A$, we know th
     A(ZY) = 0Y \\
     AZY = 0 \text{ or } A\hat{Z} = 0
 \end{align*}
-Thus proving $\hat{Z} = ZY$ is also a null-space matrix for A.
+Thus proving $\hat{Z} = ZY$ is also a null-space matrix for A. \newline
+
+\textbf{Problem 3.1:} We will compute a basis for the null space for the following matrices using variable reduction:
+
+\{i\}
+\begin{align*} A =
+    \begin{bmatrix}
+        1 & 1 & 1 & 1 \\
+        1 & -1 & -1 & 1 \\
+        0 & 1 & 0 & 1
+    \end{bmatrix} \Rightarrow
+    \begin{bmatrix}
+        1 & 1 & 1 & 1 \\
+        0 & -2 & -2 & 0 \\
+        0 & 1 & 0 & 1
+    \end{bmatrix} && R_1 - R_2 \xrightarrow{} R_2 \\
+    \begin{bmatrix}
+        1 & 1 & 1 & 1 \\
+        0 & -2 & -2 & 0 \\
+        0 & 0 & -1 & 1
+    \end{bmatrix} && \frac{R_2}{2} + R_3 \xrightarrow{} R_3 
+\end{align*}\begin{align*}
+    x_1 + x_2 + x_3 + x_4 = 0 && -2x_2 - 2x_3 = 0 && -x_3 + x_4 = 0 && x_4 = x_4 \\
+    x_4 = t && x_3 = t && x_2 = -t && x_1 = -t
+\end{align*}
+Thus null(A) $ = t\begin{bmatrix} -1 \\ -1 \\ 1 \\ 1\end{bmatrix}$ for $t \in \mathbb{R}$ \newline
+
 \end{document}

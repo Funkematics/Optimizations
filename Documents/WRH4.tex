@@ -89,4 +89,47 @@ Thus null(A) $ = s\begin{bmatrix} -1 \\ 1 \\ 0 \\ 0\end{bmatrix} + t\begin{bmatr
 \end{align*}
 Thus null(A) $ = s\begin{bmatrix} 0 \\ -1 \\ 1 \\ 0\end{bmatrix} + t\begin{bmatrix} -1 \\ 0 \\ 0 \\ 1\end{bmatrix} $   for $s,t \in \mathbb{R}$ \newline
 
+\textbf{\{iv\}}
+\begin{align*} A =
+    \begin{bmatrix}
+        1 & 1 & 1 & 1 \\
+        2 & 0 & 0 & 2 \\
+        1 & -1 & -1 & 1
+    \end{bmatrix} \Rightarrow
+    \begin{bmatrix}
+        1 & 1 & 1 & 1 \\
+        2 & 0 & 0 & 2 \\
+        0 & -1 & -1 & 0
+    \end{bmatrix} && \frac{R_2}{2} - R_3 \xrightarrow{} R_3 \\
+    \begin{bmatrix}
+        1 & 1 & 1 & 1 \\
+        0 & 2 & 2 & 0 \\
+        0 & -1 & -1 & 0
+    \end{bmatrix} && 2R_1 - R_2 \xrightarrow{} R_2 \\
+    \begin{bmatrix}
+        1 & 1 & 1 & 1 \\
+        0 & 2 & 2 & 0 \\
+        0 & 0 & 0 & 0
+    \end{bmatrix} 
+    && \frac{R_2}{2} + R_3 \xrightarrow{} R_3 \\
+    \begin{bmatrix}
+        1 & 1 & 1 & 1 \\
+        0 & 1 & 1 & 0 \\
+        0 & 0 & 0 & 0
+    \end{bmatrix} 
+    && \frac{R_2}{2} \xrightarrow{} R_2 \\
+    \begin{bmatrix}
+        1 & 0 & 0 & 1 \\
+        0 & 1 & 1 & 0 \\
+        0 & 0 & 0 & 0
+    \end{bmatrix}
+    && R_2 - R_1 \xrightarrow{} R_1
+\end{align*}
+\begin{align*}
+    x_1 + x_4 = 0 && x_2 + x_3 = 0 && x_3 = s && x_4 = t \\
+    x_2 = -s && x_1 = -t
+\end{align*} Thus null(A) $ = s\begin{bmatrix} 0 \\ -1 \\ 1 \\ 0\end{bmatrix} + t\begin{bmatrix} -1 \\ 0 \\ 0 \\ 1\end{bmatrix} $   for $s,t \in \mathbb{R}$ \newline
+
+
+
 \end{document}

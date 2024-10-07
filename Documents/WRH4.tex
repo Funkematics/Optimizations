@@ -130,7 +130,7 @@ Thus null(A) $ = s\begin{bmatrix} 0 \\ -1 \\ 1 \\ 0\end{bmatrix} + t\begin{bmatr
     x_2 = -s && x_1 = -t
 \end{align*} Thus null(A) $ = s\begin{bmatrix} 0 \\ -1 \\ 1 \\ 0\end{bmatrix} + t\begin{bmatrix} -1 \\ 0 \\ 0 \\ 1\end{bmatrix} $   for $s,t \in \mathbb{R}$ \newline
 
-\textbf{Problem 3.3} 
+\textbf{Problem 3.3} For the following problem we use $p_2$ and $p_3$ as our basic variables for $A$ and we attempt the same with $p_1$ and $p_4$
 \begin{align*} A = 
     \begin{bmatrix}
       1 & 2 & 0 & 2 \\
@@ -139,7 +139,21 @@ Thus null(A) $ = s\begin{bmatrix} 0 \\ -1 \\ 1 \\ 0\end{bmatrix} + t\begin{bmatr
     \begin{bmatrix}
       1 & 2 & 0 & 2 \\
       0 & 1 & -0.5 & 0
+    \end{bmatrix} \\
+    \begin{bmatrix}
+    1 & 0 & 1 & 2 \\
+    0 & 1 & -0.5 & 0
     \end{bmatrix}
 \end{align*}
-
+\begin{align*}
+p_1 + p_3 + 2p_4 = 0 && p_2 - \frac{1}{2}p_3 = 0 && p_2 = s && p_3 = t \\
+\end{align*}
+\textbf{Problem 1.2} We are tasked with finding all values $a$ such that $(-3,4)^T$ us the optimal solution of the following problem:
+\begin{align*}
+  \text{maximize } && z = ax_2 + (2-a)x_2 \\
+  \text{subject to } && 4x_1 + 3x_2 \leq  \\
+  && 2x_1 + 3x_2 \leq 7 \\ 
+  && x_1 + x_2 \leq 1
+\end{align*}
+$a = (\frac{6}{7}, 1)$, we will expand on this later
 \end{document}

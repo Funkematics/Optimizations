@@ -135,20 +135,65 @@ Thus null(A) $ = s\begin{bmatrix} 0 \\ -1 \\ 1 \\ 0\end{bmatrix} + t\begin{bmatr
     \begin{bmatrix}
       1 & 2 & 0 & 2 \\
       2 & 2 & 1 & 4
-    \end{bmatrix} \Rightarrow
-    \begin{bmatrix}
-      1 & 2 & 0 & 2 \\
-      0 & 1 & -0.5 & 0
-    \end{bmatrix} \\
-    \begin{bmatrix}
-    1 & 0 & 1 & 2 \\
-    0 & 1 & -0.5 & 0
     \end{bmatrix}
 \end{align*}
 \begin{align*}
-p_1 + p_3 + 2p_4 = 0 && p_2 - \frac{1}{2}p_3 = 0 && p_2 = s && p_3 = t \\
+    p_1 + 2p_2 + 2p_4 = 0 && 2p_1 + p_2 + 2p_3 + 4p_4 = 0 &&
+    p_1 = -2p_2 - 2p_4 \\ -4p_2 - 4p_4 + p_2 + 2p_3 + 4p_4 = 0 && -3p_2 + 2p_3 = 0 && p_2 = \frac{2}{3}p_3 \\
+    p_1 = -\frac{4}{3}p_3 - 2p_4
 \end{align*}
+    Since $p_2 = \frac{2}{3} p_3$ We end up using $p_4$ as our free variable
+    \begin{align*}\text{null}(A) = 
+    p_3
+    \begin{bmatrix}
+        -\frac{4}{3} \\ \frac{2}{3} \\ 1 \\ 0
+    \end{bmatrix} +
+    p_4
+    \begin{bmatrix}
+        -2 \\ 0 \\ 0 \\ 1
+    \end{bmatrix}
+\end{align*}
+ For the second part of the problem we consider $p_1$ and $p_4$ as our free variables, we similarly reduce and substitute to get our vectors:
+\begin{align*}
+    p_1 + 2p_2 + 2p_4 = 0 && 2p_1 + p_2 + 2p_3 + 4p_4 = 0 && p_2 = - \frac{1}{2}(p_1 + 2p_4) \\
+    2p_1 - \frac{1}{2}p_1 - p_4 + 2p_3 + 4p_4 = 0 && \frac{3}{2}p_1 + 2p_3 + 3p_4 = 0 && 2p_3 = -\frac{3}{2} - 3p_4 \\
+    p_3 = -\frac{3}{4}p_1 - \frac{3}{2}p_4  
+\end{align*}
+    We can construct our solution with our $p_2= -\frac{1}{2}(p_1 + 2p_4)$ and $p_3 = -\frac{3}{4}p_1 - \frac{3}{2}p_4$
+    \begin{align*}\text{null}(A) = p_1
+    \begin{bmatrix}
+        1 \\ -\frac{1}{2} \\ -\frac{3}{4} \\ 0
+    \end{bmatrix}
+        +  p_4
+    \begin{bmatrix}
+        0 \\ -1 \\ -\frac{3}{2} \\ 1
+    \end{bmatrix}
+\end{align*}
+So we can actually do it with $p_1$ and $p_4$ as basic variables. \newline
+
+\textbf{Problem 3.4} Theorem: Let $A$ be an $m$ x $n$ matrix of full row rank. The matrix $AA^T$ is positive definite and so its inverse exists. \newline 
+
+    Proof: We want to show that $x^TAA^Tx > 0$ (using the definition of positive definite) for some non-zero vector $x \in \mathbb{R}^m$, first we note that $AA^T$ is symmetric:
+\begin{align*}
+    (AA^T)^T = (A^T)^TA^T = AA^T
+\end{align*}
+Now we consider the the case of $x^TAA^Tx$ 
+\begin{align*}
+    x^TAA^Tx = (A^Tx)^T(A^Tx) = ||A^Tx||^2
+\end{align*}
+    This is because the product of a vector and its transpose is the squared norm which is always positive. In our case as long as $x$ is a non-zero vector, $x^TAA^Tx$ is positive definite and thus invertible.
+
+\textbf{problem 1.1} We solve the following linear programs graphically: \newline
+\textbf{\{i\}}
+    \begin{align*}
+        \text{minimize} &\null \quad z = 3x_2 + x_2 \\ 
+        \text{subject to} &\null \quad x_1 - x_2 \leq 1 \\
+        & 3x_1 + 2x_2 \leq 12 \\
+        & 2x_1 + 3x_2 \leq 3 \\
+    \end{align*}
+
 \textbf{Problem 1.2} We are tasked with finding all values $a$ such that $(-3,4)^T$ us the optimal solution of the following problem:
+
 \begin{align*}
   \text{maximize } && z = ax_2 + (2-a)x_2 \\
   \text{subject to } && 4x_1 + 3x_2 \leq  \\

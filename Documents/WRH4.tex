@@ -186,19 +186,77 @@ Now we consider the the case of $x^TAA^Tx$
 \textbf{problem 1.1} We solve the following linear programs graphically: \newline
 \textbf{\{i\}}
     \begin{align*}
-        \text{minimize} &\null \quad z = 3x_2 + x_2 \\ 
+        \text{minimize} &\null \quad z = 3x_1 + x_2 \\ 
         \text{subject to} &\null \quad x_1 - x_2 \leq 1 \\
         & 3x_1 + 2x_2 \leq 12 \\
         & 2x_1 + 3x_2 \leq 3 \\
+        & -2x_1 + 3x_2 \geq 9 \\
+        & x_1, x_2 \geq 0
     \end{align*}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale = 0.35]{1.1(i).png}
+    \end{figure}
+
+Our red line is our objective function for $z = 0$ within the boundary of our feasible set, the dark triangle in our graph, our
+minimum is $0$ with our minimizer being $(0,0)^T$. \newline
+\textbf{\{ii\}}
+    \begin{align*}
+        \text{maximize} &\null \quad z = x_1 + 2x_2 \\ 
+        \text{subject to} &\null \quad 2x_1 + x_2 \geq 12 \\
+        & x_1 + x_2 \geq 5 \\
+        & -x_1 + 3x_2 \leq 3 \\
+        & 6x_1 - x_2 \geq 12 \\
+        & x_1, x_2 \geq 0
+    \end{align*}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale = 0.35]{1.1(ii).png}
+    \end{figure}
+
+Our solution to this problem is bound by the constraint $-x_1 +3x_2 \leq 3$, Giving us our maximum value $z = 3$ along the line $-x_1 + 3x_2 = 3$. Our solution set ends up being  $p_2 = \frac{p_1}{3} + 1$ for $p_1 \geq \frac{33}{7}$ and $p_2 \geq \frac{18}{7}$.
+
+\textbf{\{iii\}}
+    \begin{align*}
+        \text{minimize} &\null \quad z = x_1 - 2x_2 \\ 
+        \text{subject to} &\null \quad x_1 - 2x_2 \geq 4 \\
+        & x_1 + x_2 \leq 8 \\
+        & x_1, x_2 \geq 0
+    \end{align*}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale = 0.35]{1.1(iii).png}
+    \end{figure}
+
+Our red line is our objective function for $z = 4$ and our feasible set is the darker green shaded triangle in our figure. our minimum value ends up being $4$ with our minimizer being the set of points along the red line on the triangle. the point $(4,0)^t$ is on the vertex is in our solution set for example. our solution set ends up being $p_2 = \frac{p_1}{2}-2$ for $p_1 \in [4, \frac{20}{3}]$ and $p_2 \in [0, \frac{4}{3}]$.
+
+\textbf{\{iv\}}
+    \begin{align*}
+        \text{minimize} &\null \quad z = -x_1 - x_2 \\ 
+        \text{subject to} &\null \quad x_1 - x_2 \geq 1 \\
+        & x_1 - 2x_2 \leq 8 \\
+        & x_1, x_2 \geq 0
+    \end{align*}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale = 0.35]{1.1(iv).png}
+    \end{figure}
+
+Our red line is our objective function for $z = -8$, our minimum ends up being $-8$ with our minimizer being $(8,0)^T$
 
 \textbf{Problem 1.2} We are tasked with finding all values $a$ such that $(-3,4)^T$ us the optimal solution of the following problem:
-
 \begin{align*}
-  \text{maximize } && z = ax_2 + (2-a)x_2 \\
-  \text{subject to } && 4x_1 + 3x_2 \leq  \\
+  \text{maximize } && z = ax_1 + (2-a)x_2 \\
+  \text{subject to } && 4x_1 + 3x_2 \leq 0 \\
   && 2x_1 + 3x_2 \leq 7 \\ 
   && x_1 + x_2 \leq 1
 \end{align*}
-$a = (\frac{6}{7}, 1)$, we will expand on this later
+We graph the function below
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale = 0.35]{1.2.png}
+\end{figure}
+Our red line is objective function with $a = \frac{4}{7}$ and our, we found this a by plotting our point $(-3,4)^T$ and walking along $a$ values. This is what get us our optimum solution for our point $(-3,4)^T$.
+
+\textbf{Problem P8}
 \end{document}

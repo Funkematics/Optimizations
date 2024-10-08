@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1728304510.97267 "WRH4.tex" "build/WRH4.pdf" "WRH4" 1728304511.20672 0
+["pdflatex"] 1728352066.30576 "WRH4.tex" "build/WRH4.pdf" "WRH4" 1728352066.70574 0
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1246382020 916 f87d7c45f9c908e672703b83b72241a3 ""
@@ -17,6 +17,7 @@
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb" 1248133631 36299 5f9df58c2139e7edcf37c8fca4bd384d ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb" 1248133631 36281 c355509802a035cadc5f15869451dcee ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1248133631 35752 024fb6c41858982481f6968b5fc26508 ""
+  "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb" 1248133631 31809 8670ca339bf94e56da1fc21c80635e2a ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb" 1248133631 32762 224316ccc9ad3ca0423a14971cfa7fc1 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1248133631 32569 5e5ddc8df908dea60932f3c484a54c0d ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb" 1248133631 34694 ad62b13721ee8eda1dcc8993c8bd7041 ""
@@ -124,8 +125,13 @@
   "/usr/share/texmf-site/tex/latex/pgf/utilities/pgfrcs.sty" 1722184320.04257 325 f9f16d12354225b7dd52a3321f085955 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1722185430.34591 327402 6410649c3b72c4c0d98fe7cc3f3648f3 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1722185407 6800596 54f1918a1090a3f17a9b3c10811a6409 ""
-  "WRH4.tex" 1728304509.76623 7365 f974ac3a90bc020db2b38cba5fd9966a ""
-  "build/WRH4.aux" 1728304511.17291 32 c81c40425fbb5e93b90fba65da0b5e61 "pdflatex"
+  "1.1(i).png" 1728307010.21503 70006 a2c451d55cf6235749adc6a80c0fa00b ""
+  "1.1(ii).png" 1728309232.21698 60128 9a01935360801bb069eca6267920bdef ""
+  "1.1(iii).png" 1728341456.88878 39275 c1fdc1029dd16e8eadaf672c0b2d07a4 ""
+  "1.1(iv).png" 1728348585.96828 53777 fdfe25d159f17a936fe5be96a0a37fc1 ""
+  "1.2.png" 1728350975.28527 61846 98b72b95f23070e85a195c6b1db6af09 ""
+  "WRH4.tex" 1728352064.27107 9885 084ea76717187b2d2b42256e145ac609 ""
+  "build/WRH4.aux" 1728352066.66775 32 f852561997c05a7d986acd1deeb530ec "pdflatex"
   (generated)
   "build/WRH4.aux"
   "build/WRH4.log"

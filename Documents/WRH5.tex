@@ -159,5 +159,34 @@ Where $A \in \mathbb{R}^{mxn}$, $b \in \mathbb{R}^n$, $x, e, s \in \mathbb{R}^n$
         \frac{3}{2} & \frac{26}{3} & 2 & 4
     \end{bmatrix}
 \end{align*}
-The reason this techinque cannot be used to eliminate variables with nonnegative constraints is because we can't ensure that our substitution for x is greater than or equal to zero, we may actually violate the original problems constraints if we don't add new constraints. I have not tested if this is equivalent to the original problem, though a concern is the more calculations or steps a human has to accomplish, the more likely there will be an error.
+The reason this technique cannot be used to eliminate variables with nonnegative constraints is because we can't ensure that our substitution for x is greater than or equal to zero, we may actually violate the original problems constraints if we don't add new constraints.
+
+\textbf{Problem 2.5} We consider the following linear program below
+\begin{align*}
+    \text{minimize} &\null \quad z = c^Tx \\
+    \text{subject to} &\null \quad Ax \leq b \\
+    & \quad e^Tx = 1 \\
+    & \quad x_1, ..., x_{n-1} \geq 0, x_n \text{free}
+\end{align*}
+Where $e = (1,...,1)^T$, $b$ and $c$ are arbitrary vectors of length $n$, and $A$ is the matrix with entries $a_{i,i} = a_{i,n} = 1$ for $i = 1,...n$ and all other entries being zero. We use the constraint $e^Tx = 1$ to eliminate the free variable $x_n$.
+
+Lets first show what $A$ actually looks for visual reference and convenience:
+\begin{align*} A = 
+    \begin{bmatrix}
+        1 & 0 & 0 & ... & 0 & 1 \\
+        0 & 1 & 0 & ... & 0 & 1 \\
+        0 & 0 & 1 & ... & 0 & 1 \\ 
+        \vdots & \vdots & \vdots & \ddots & \vdots & \vdots \\
+        0 & 0 & 0 & ... & 1 & 1
+    \end{bmatrix}
+\end{align*}
+Now lets consider the constraint $e^Tx = 1$:
+\begin{align*}
+    x_1 + x_2 + ... + x_n = 1
+\end{align*}
+and solve for $x_n$:
+\begin{align*}
+    x_n = 1 - (x_1 + x_2 + ... + x_{n-1})
+\end{align*}
+We can substitute this into our objective function $z = c^Tx$ and into our constraints like the previous problem we did: 
 \end{document}

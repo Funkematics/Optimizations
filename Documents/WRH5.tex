@@ -188,5 +188,33 @@ and solve for $x_n$:
 \begin{align*}
     x_n = 1 - (x_1 + x_2 + ... + x_{n-1})
 \end{align*}
-We can substitute this into our objective function $z = c^Tx$ and into our constraints like the previous problem we did: 
+We can substitute this into our objective function $z = c^Tx$ and into our constraints like the previous problem we did, for the substitution in our objective function:
+\begin{align*}
+    \hat{z} &= c_1x_1 + c_2x_2 + ... c_{n-1}x_{n-1} + c_n(1 - (x_1 + x_2 + ... +x_{n-1})) \\ 
+    &= (c_1-c_n)x_1 + (c_2-c_n)x_2 + ... + (c_{n-1} - c_n)x_{n-1} + c_n
+\end{align*}
+Now we do it for our $Ax \leq b$
+\begin{align*}
+    \begin{bmatrix}
+        x_1 + x_n \\
+        x_2 + x_n \\
+        \vdots \\
+        x_{n-1} + x_n \\
+        x_n + x_n
+    \end{bmatrix} \leq b && \Rightarrow &&
+    \begin{bmatrix}
+        1 - x_1 \\
+        1 - x_2 \\
+        \vdots \\
+        1 - x_{n-1} \\
+        2 - (x_1 + x_2... + x_{n-1})  
+    \end{bmatrix} \leq b
+\end{align*}
+so our constraints end up becoming:
+\begin{align*}
+    & 1 - x_i \leq b_i \text{ for } i = 1,...,n-1\\
+    & 2 - (x_1 + x_2 + ... + x_{n-1}) \leq b_n \text{ for } n = i
+\end{align*}
+This might be a pretty good approach when $n$ is large, I can't imagine that this would significantly improve performance for a solver though. It might be a marginal improvement, the reason I have my doubts is because the nature of this problem is linear and it will always remain linear. Though until I test this I won't know how much of an improvement if there is one. I'm a little hestitant to say if its a good approach or not considering the time and effort taken to remove $x_n$ compared to maybe a marginal improvement in computation speed. This is a matter of the cost of human time and the cost of computation time.
+
 \end{document}

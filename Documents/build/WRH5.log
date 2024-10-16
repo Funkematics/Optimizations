@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023 Gentoo Linux) (preloaded format=pdflatex 2024.7.28)  15 OCT 2024 22:46
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023 Gentoo Linux) (preloaded format=pdflatex 2024.7.28)  16 OCT 2024 00:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**WRH4.tex
-(./WRH4.tex
+**WRH5.tex
+(./WRH5.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
 (/usr/share/texmf-dist/tex/latex/base/article.cls
@@ -492,8 +492,8 @@ File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count303
 \l__pdf_internal_box=\box67
 )
-(build/WRH4.aux)
-\openout1 = `WRH4.aux'.
+(build/WRH5.aux)
+\openout1 = `WRH5.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
 LaTeX Font Info:    ... okay on input line 20.
@@ -576,100 +576,39 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 27.
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Underfull \hbox (badness 10000) in paragraph at lines 35--37
+\c@align=\count310
 
- []
-
-LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 4
-0.
-(/usr/share/texmf-dist/tex/latex/base/omscmr.fd
-File: omscmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/bx/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/b/n' tried instead on input line 40.
-
-Underfull \hbox (badness 10000) in paragraph at lines 60--62
+Underfull \hbox (badness 10000) in paragraph at lines 33--36
 
  []
 
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
-]
-Underfull \hbox (badness 10000) in paragraph at lines 89--91
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 131--132
-
- []
-
-[2]
-Underfull \hbox (badness 10000) in paragraph at lines 171--173
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 174--175
-
- []
-
-[3]
-<1.1(i).png, id=24, 803.0pt x 803.0pt>
-File: 1.1(i).png Graphic file (type png)
-<use 1.1(i).png>
-Package pdftex.def Info: 1.1(i).png  used on input line 198.
-(pdftex.def)             Requested size: 281.05421pt x 281.05421pt.
- [4 <./1.1(i).png>]
-<1.1(ii).png, id=30, 803.0pt x 803.0pt>
-File: 1.1(ii).png Graphic file (type png)
-<use 1.1(ii).png>
-Package pdftex.def Info: 1.1(ii).png  used on input line 214.
-(pdftex.def)             Requested size: 281.05421pt x 281.05421pt.
-<1.1(iii).png, id=31, 803.0pt x 803.0pt>
-File: 1.1(iii).png Graphic file (type png)
-<use 1.1(iii).png>
-Package pdftex.def Info: 1.1(iii).png  used on input line 228.
-(pdftex.def)             Requested size: 281.05421pt x 281.05421pt.
- [5 <./1.1(ii).png>]
-<1.1(iv).png, id=37, 803.0pt x 803.0pt>
-File: 1.1(iv).png Graphic file (type png)
-<use 1.1(iv).png>
-Package pdftex.def Info: 1.1(iv).png  used on input line 242.
-(pdftex.def)             Requested size: 281.05421pt x 281.05421pt.
- [6 <./1.1(iii).png>]
-<1.2.png, id=42, 803.0pt x 803.0pt>
-File: 1.2.png Graphic file (type png)
-<use 1.2.png>
-Package pdftex.def Info: 1.2.png  used on input line 257.
-(pdftex.def)             Requested size: 281.05421pt x 281.05421pt.
- [7 <./1.1(iv).png>] [8 <./1.2.png>] (build/WRH4.aux)
+] (build/WRH5.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 15244 strings out of 476182
- 295554 string characters out of 5796232
- 1955975 words of memory out of 5000000
- 36985 multiletter control sequences out of 15000+600000
- 560684 words of font info for 47 fonts, out of 8000000 for 9000
+ 15196 strings out of 476182
+ 294823 string characters out of 5796232
+ 1943975 words of memory out of 5000000
+ 36941 multiletter control sequences out of 15000+600000
+ 560429 words of font info for 46 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 84i,18n,87p,517b,252s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></usr/share
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></us
-r/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts
-/symbols/msbm10.pfb>
-Output written on build/WRH4.pdf (8 pages, 245423 bytes).
+ 84i,14n,87p,517b,247s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/s
+hare/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dis
+t/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on build/WRH5.pdf (1 page, 82258 bytes).
 PDF statistics:
- 95 PDF objects out of 1000 (max. 8388607)
- 54 compressed objects within 1 object stream
+ 51 PDF objects out of 1000 (max. 8388607)
+ 31 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 38 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

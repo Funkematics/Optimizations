@@ -1,0 +1,75 @@
+\documentclass{article}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{tikz}
+\usepackage{parskip}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{fancyhdr}
+\usepackage[%paperheight = 59.4cm,
+            %paperwidth = 42cm,
+            %includehead,
+            nomarginpar,
+            textwidth=15cm,
+            headheight=10mm]{geometry}
+
+
+\begin{document}
+ 
+\pagestyle{fancy}
+%\fancyhead{}\fancyfoot{}
+\AtBeginEnvironment{align}{\setcounter{equation}{0}} 
+\fancyhf[OHC]{Christopher Munoz WRH5 Optimization}
+\textbf{Problem 2.1} We covert the following linear program to standard form:
+\begin{align}
+    \text{maximize} &\null \quad z = 3x_1 + 5x_2 - 4x_3 \\ 
+    \text{subject to} &\null \quad 7x_1 - 2x_2 - 3x_3 \geq 4 \\
+    & \quad -2x_1 + 4x_2 + 8x_3 = -3 \\
+    & \quad 5x_1 - 3x_2 - 2x_3 \leq 9 \\
+    & \quad x_1 \geq 1, x_2 \leq 7, x_3 \geq 0
+\end{align}
+We convert the problem into a minimization problem and multiplying (1) by -1, adding slack to (2), multiplying (3) by -1 adding surplus to (4), and turning our general constraints into equalities in 5, We will be using the notation in the book. Our linear program in standard form ends up being: \newline
+\newcounter{align}
+\begin{align}
+    \text{minimize} &\null \quad \hat{z} = -3x_1 - 5x_2 + 4x_3 \\ 
+    \text{subject to} &\null \quad 7x_1 - 2x_2 - 3x_3 - e_4 = 4 \\
+    & \quad 2x_1 - 4x_2 - 8x_3 = 3 \\
+    & \quad 5x_1 - 3x_2 - 2x_3 - s_5 = 9 \\
+    & \quad x_1 - e_6 = 1 \\
+    & \quad x_2 + s_7 = 7 \\
+    & \quad x_1, x_2, x_3, e_4, s_5, e_6,s_7 \geq 0
+\end{align}
+Or 
+\begin{align*}
+    \text{minimize} &\null \quad z = c^Tx \\ 
+    \text{subject to} &\null \quad Ax=b \\
+    & \quad x \geq 0
+\end{align*}
+Where $A \in \mathbb{R}^{mxn}$, $b \in \mathbb{R}^n$, $x, e, s \in \mathbb{R}^n$ such that:  
+\begin{align*}c = 
+    \begin{bmatrix} 
+        -3 & - 5 & 4 & 0 & 0 & 0 & 0
+    \end{bmatrix}^T && A =  
+    \begin{bmatrix}
+        7 & -2 & -3 & -1 & 0 & 0 & 0 \\
+        2 & -4 & -8 & 0 & 0 & 0 & 0 \\
+        5 & -3 & -2 & 0 & -1 & 0 & 0 \\
+        1 & 0 & 0 & 0 & 0 & -1 & 0 \\
+        0 & 1 & 0 & 0 & 0 & 0 & 1
+    \end{bmatrix} \\ x = 
+    \begin{bmatrix}
+        x_1 & x_2 & x_3 & e_4 & s_5 & e_6 & s_7
+    \end{bmatrix}^T && b = 
+    \begin{bmatrix}
+        4 & 3 & 9 & 1 & 7
+    \end{bmatrix}^T
+\end{align*} \newline
+\textbf{Problem 2.2} We convert the fllowing linear program to standard form:
+
+
+
+
+\end{document}

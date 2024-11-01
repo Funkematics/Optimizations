@@ -136,7 +136,7 @@ Our output ends up being:
         Zero at x: 6.40970, f(x): -0.00000
         Number of zeros found: 3
 \end{lstlisting}
-Note that the reason f(x) values end up as positive or negative zero, is because these are approximations and are not actually true zero, rather they are values which are sufficiently close to zero and are simply cut off within the first 5 digits. Source code is available in https://github.com/Funkematics/Optimizations/tree/main/Code as "NewtProb.c", you may compile by running "make".
+Note that the reason f(x) values end up as positive or negative zero, is because these are approximations and are not actually true zero, rather they are values which are sufficiently close to zero and are simply cut off within the first 5 digits. Source code is available in https://github.com/Funkematics/Optimizations/tree/main/Code/Newt as "NewtProb.c", you may compile by running "make".
 
 \textbf{Problem 7.10} For this problem we we are tasked with solving the following system of 2 variable equations using Newtons method and we are told there are 4 solutions. 
 \begin{align*}
@@ -234,9 +234,90 @@ int main()
 \end{lstlisting}
 The solutions we get as our output ends up being
 \begin{lstlisting}
-Solution 1: x1 = 0.732260, x2 = 0.681025
-Solution 2: x1 = -0.732260, x2 = 0.681025
-Solution 3: x1 = -0.473070, x2 = -0.881025
-Solution 4: x1 = -0.473070, x2 = -0.881025
+        Solution 1: x1 = 0.732260, x2 = 0.681025
+        Solution 2: x1 = -0.732260, x2 = 0.681025
+        Solution 3: x1 = -0.473070, x2 = -0.881025
+        Solution 4: x1 = -0.473070, x2 = -0.881025
 \end{lstlisting}
+The code can be found in https://github.com/Funkematics/Optimizations/tree/main/Code/DoubNewt and can be compiled with a simple "make" command.
+\newline
+
+
+\textbf{Problem 2.4} Corollary 6.7: If x is a feasible solution to the primal, y is a feasible solution to the dual,
+and $c^Tx = b^Ty$, then $x$ and $y$ are optimal for their respective problems.
+
+Proof: Lets consider a Linear Program in standard form and its dual
+\begin{align*}
+    \text{minimize} &\null \quad Z = c^Tx \\
+    \text{subject to} &\null \quad Ax \leq b \\
+     &\null \quad x \geq 0
+\end{align*}
+and
+\begin{align*}
+    \text{maximize} &\null \quad W = b^Ty \\
+    \text{subject to} &\null \quad A^Ty \geq c \\
+     &\null \quad y \geq 0
+\end{align*}
+Let $x$ be feasible for the primal problem and $y$ be feasible for the dual problem given the constraints. By definition for any feasible x and y, the duality gap is $x^Ts = c^Tx - b^Ty$, optimality ensures that $x^Ts = 0$. Weak duality also states that $b^Ty \leq c^Tx$ which holds because $c^Tx = b^Ty$. 
+
+Now lets assume by contradiction that $x$ in our primal is not optimal, Then there exists an $\hat{x}$ such that $c^T\hat{x} < c^Tx$, since our $\hat{x}$ is feasible then by weak duality $b^Ty \leq c^T\hat{x}$ which implies that $c^Tx = b^Ty < c^T\hat{x}$. This contradicts $b^T\hat{y} > b^Ty$ leading to $b^T\hat{y} > b^Ty = c^Tx$, this contradicts weak duality $b^T\hat{y} \leq c^Tx$. Therefore $y$ must be optimal. Thus both x and y must be optimal for their respective problems. $\square$
+\newline
+
+\textbf{Problem 2.11}We will come back to this.
+
+\textbf{Problem 11} For this problem we run the kleeminty.m program in octave and get our maximum value in under 10 seconds using an n of $13$ in my case. There is an exponential growth in the number of iterations needed as n increases so even though we are well below 10 seconds, when we use an $n=14$ we are slightly above 10 seconds. The output of the last iteration as well as runtime are below:
+
+\begin{lstlisting}
+    z = -1.2207e+09
+    iters = 8192
+    PASS
+    Elapsed time is 5.2905 seconds.
+\end{lstlisting}
+The number of variables in standard form for $n$ is $2n+1$, in our case this is 27 variables in standard form for our Klee-Minty cube with $2n+1$ constraints or 27 constraints. The runtime roughly doubles for each increment of n making it computationally  infeasible to use simplex method in basic form.
+
+\textbf{Problem 12} We are tasked with writing psuedo-code that implement a phase-1 strategy that generates an initial BFS. We similarly use GNU Octave. 
+\begin{lstlisting}[style=cstyle]
+  1 function [x, isFeasible] = phaseone(A, b)
+  2     % A: m x n matrix full of constraints
+  3     % b: m x 1 vector, the right side of our equations
+  4     % x: n x 1, the starting point for our real problem                           
+  5     % Ideally this should tell us if we can even solve the problem
+  6       
+  7     % phase-1 problem setup                   
+  8     m = size(A, 1);   % Num of constraints    
+  9     n = size(A, 2);   % Num of variables                     
+ 10  
+ 11     I = eye(m);  % Identity matrix                           
+ 12     
+ 13     % Mix our original A with the identity                            
+ 14     A_prime = [A, I];
+ 15     
+ 16     % new extended objective function                                            
+ 17     c_prime = [zeros(1, n), ones(1, m)];
+ 18     
+ 19     % Next step, solve phaseone linear problem
+ 20     % Suppose there exists a simplex solver such that
+ 21     [solution, success] = simplex_solver(A_prime, b, c_prime);
+ 22     
+ 23     % Analysis                  
+ 24     if success
+ 25         artificial_vars = solution(n + 1:end);  % Get artificial variables       
+ 26         original_vars = solution(1:n);          % Our original variables  
+ 27         
+ 28         % Check feasibility                                      
+ 29         if sum(artificial_vars) == 0
+ 30             x = original_vars;  % Case where its feasible      
+ 31             isFeasible = true;
+ 32         else
+ 33             x = [];             % Case where its not feasible
+ 34             isFeasible = false;
+ 35         end
+ 36     else   
+ 37         % This is in case of failure.                                   
+ 38         x = [];
+ 39         isFeasible = false;
+ 40     end
+ 41 end    
+\end{lstlisting}
+We start buy adding artificial variables to our constraints A, each with a coefficient of 1. We then should use a simplex solver to minimize the sum of artificial variables. We know that we've found a solution if the sum of all artificial variables is zero, if any artificial variables are non-zero then the problem itself is infeasible or the program has failed.
 \end{document}

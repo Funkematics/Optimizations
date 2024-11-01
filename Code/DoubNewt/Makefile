@@ -1,8 +1,8 @@
-PROG = NewtProb
+PROG = DoubNewtProb
 CC = gcc
 CFLAGS = -g -Wall -Wextra
 LDFLAGS = -lm
-SRCS = NewtProb.c 
+SRCS = DoubNewtProb.c 
 OBJS = $(SRCS:.c=.o)
 
 $(PROG): $(OBJS)

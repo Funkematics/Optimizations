@@ -39,10 +39,10 @@
 \pagestyle{fancy}
 %\fancyhead{}\fancyfoot{}
 \AtBeginEnvironment{align}{\setcounter{equation}{0}} 
-\fancyhf[OHC]{Christopher Munoz WRH5 Optimization}
+\fancyhf[OHC]{Christopher Munoz WRH6 Optimization}
 \textbf{Problem 7.1} We are tasked with finding all 3 solutions for the function $f(x) = x^3 - 5x^2 - 12x + 19 = 0$ via newtons method, for this problem I figured the best way forward was to use a modified and redacted version of my C code with improvements made thanks to suggestions by Ed Bueler.
 
-\begin{lstlisting}[style=CStyle]
+\begin{lstlisting}[style=cstyle]
 #include <stdio.h>
 #include <math.h>
 #include <stdint.h>
@@ -131,11 +131,112 @@ int main()
 \end{lstlisting}
 Our output ends up being:
 \begin{lstlisting}
-Zero at x: -2.56524, f(x): -0.00000
-Zero at x: 1.15555, f(x): 0.00000
-Zero at x: 6.40970, f(x): -0.00000
-Number of zeros found: 3
+        Zero at x: -2.56524, f(x): -0.00000
+        Zero at x: 1.15555, f(x): 0.00000
+        Zero at x: 6.40970, f(x): -0.00000
+        Number of zeros found: 3
 \end{lstlisting}
-Note that the reason f(x) values end up as positive or negative zero, is because these are approximations and are not actually true zero, rather they are values which are sufficiently close to zero and are simply cut off within the first 5 digits. Source code is available in https://github.com/Funkematics/Optimizations/tree/main/Code as "NewtProb.c", you may compile using by running "make".
+Note that the reason f(x) values end up as positive or negative zero, is because these are approximations and are not actually true zero, rather they are values which are sufficiently close to zero and are simply cut off within the first 5 digits. Source code is available in https://github.com/Funkematics/Optimizations/tree/main/Code as "NewtProb.c", you may compile by running "make".
 
+\textbf{Problem 7.10} For this problem we we are tasked with solving the following system of 2 variable equations using Newtons method and we are told there are 4 solutions. 
+\begin{align*}
+    f_1(x_1,x_2) & = x_1^2 + x_2^2 - 1 = 0 \\
+    f_2(x_1,x_2) & = 5x_1^2 - x_2 - 2 = 0
+\end{align*}
+The following is a modified version of our C code, though you should note that I opted to compute the Jacobian manually, and this is because it is faster to compute manually in this case than it is to write the code to do it numerically for this problem. We evoke Cramers rule here to solve the system given by our Jacobian.
+
+\begin{lstlisting}[style=cstyle]
+#include <stdio.h>
+#include <math.h>
+
+//----------------------INTERFACE-------------------------
+#define TOLERANCE 1e-6
+#define MAX_ITER 100
+
+// Function to calculate f1 and f2
+void f(double x1, double x2, double *f1, double *f2) 
+{
+    *f1 = pow(x1, 2) + pow(x2, 2) - 1;
+    *f2 = 5* pow(x1, 2) - x2 - 2;
+}
+//Consolidated
+//----------------------------------------------------------
+
+// Function to calculate Jacobian
+void jacobian(double x1, double x2, double J[2][2])
+{
+    J[0][0] = 2*x1;
+    J[0][1] = 2*x2;
+    J[1][0] = 10*x1;
+    J[1][1] = -1;
+}
+
+// Function to solve linear equations using Cramers rule(not the seinfeld one)
+void CramerCramer(double A[2][2], double b[2], double dx[2]) 
+{
+    double det = A[0][0]*A[1][1] - A[0][1]*A[1][0];
+    if (fabs(det) > TOLERANCE) {
+        dx[0] = (b[0]*A[1][1] - b[1]*A[0][1]) / det;
+        dx[1] = (A[0][0]*b[1] - A[1][0]*b[0]) / det;
+    } else {
+        printf("Jacobian singular, cannot proceed.\n");
+        dx[0] = dx[1] = 0;
+    }
+}
+
+// Newton's method
+void duke_newton2(double *x1, double *x2, double x1_init, double x2_init) 
+{
+    double x[2] = {x1_init, x2_init};
+    double f1, f2, J[2][2], dx[2];
+    int iter = 0;
+
+    do {
+        f(x[0], x[1], &f1, &f2);
+        jacobian(x[0], x[1], J);
+        
+        double F[2] = {-f1, -f2};
+        CramerCramer(J, F, dx);
+        
+        x[0] += dx[0];
+        x[1] += dx[1];
+
+        iter++;
+        if (iter > MAX_ITER) {
+            printf("Max iterations reached.\n");
+            break;
+        }
+    } while (fabs(f1) > TOLERANCE || fabs(f2) > TOLERANCE);
+
+    *x1 = x[0];
+    *x2 = x[1];
+}
+
+int main() 
+{
+    double x1, x2;
+    
+    // Initial guesses, I cheated and used a graph to pick out places closish to the intersections(but not too close)
+    double initial_guesses[][2] = {
+        {0.9, 0.5},  
+        {-0.9, 0.5}, 
+        {-0.5, -1.5},
+        {0.5, -1.5} 
+    };
+
+    for (int i = 0; i < 4; i++) {
+        duke_newton2(&x1, &x2, initial_guesses[i][0], initial_guesses[i][1]);
+        printf("Solution %d: x1 = %f, x2 = %f\n", i+1, x1, x2);
+    }
+
+    return 0;
+}
+\end{lstlisting}
+The solutions we get as our output ends up being
+\begin{lstlisting}
+Solution 1: x1 = 0.732260, x2 = 0.681025
+Solution 2: x1 = -0.732260, x2 = 0.681025
+Solution 3: x1 = -0.473070, x2 = -0.881025
+Solution 4: x1 = -0.473070, x2 = -0.881025
+\end{lstlisting}
 \end{document}

@@ -4,15 +4,15 @@
 #include <stdbool.h>
 
 //----------------------INTERFACE-------------------------
-#define MIN 0.0
-#define MAX 2.0
-#define STEP 0.000005
+#define MIN -10.0
+#define MAX 10.0
+#define STEP 0.05
 #define EPSILON 1e-6
 #define STORAGE 100
 
 double f(double x)
 {
-    return pow((pow(x, 2) + sin(x)), 2) - 10 * (cos(5 * x) + (3.0/2.0) * x);
+    return pow(x, 3) - 5 * pow(x, 2) - 12 * x + 19;
 }
 //----------------------------------------------------------
 //The above block is where we determine our range in MIN and MAX, our epsilon, steps,

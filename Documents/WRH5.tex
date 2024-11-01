@@ -217,4 +217,37 @@ so our constraints end up becoming:
 \end{align*}
 This might be a pretty good approach when $n$ is large, I can't imagine that this would significantly improve performance for a solver though. It might be a marginal improvement, the reason I have my doubts is because the nature of this problem is linear and it will always remain linear. Though until I test this I won't know how much of an improvement if there is one. I'm a little hestitant to say if its a good approach or not considering the time and effort taken to remove $x_n$ compared to maybe a marginal improvement in computation speed. This is a matter of the cost of human time and the cost of computation time.
 
+\textbf{Problem 3.1} Lets consider the system of linear constraints and find some basic feasible solutions and extreme points:
+\begin{align}
+    2x_1 + x_2 & \leq 100 \\
+    x_1 + x_2 & \leq 80 \\
+    x_1 & \leq 40 \\
+    x_1, x_2 & \geq 0
+\end{align} We convert it to standard form by adding slack variables to (1), (2), (3). 
+\begin{align*}
+    2x_1 + x_2 + s_3 & = 100 \\
+    x_1 + x_2 + s_4 & = 80 \\
+    x_1 + s_5 & = 40 \\
+    x_1, x_2, s_3, s_4, s_5 & \geq 0
+\end{align*} Part(i): Since there are 3 constraints we can set 3 variables for basis. There should be 5 choose 3, or 10 possibilities to try. Below is what we find.
+\begin{align}
+    x_1,x_2,s_3  && \Rightarrow && x_1 = 40, x_2 = 40, s_3 = -60 \\
+    x_1, x_2,s_4 && \Rightarrow && x_1 = 40, x_2 = 20, s_4 = 20 \\
+    x_1, x_2, s_5  && \Rightarrow && x_1 = 20, x_2 = 60, s_5 = 20\\
+    x_1, s_3, s_4  && \Rightarrow && x_1 = 40, s_3 = 20, s_4 = 20\\
+    x_1, s_3, s_5  && \Rightarrow && x_1 = 80, s_3 = -60, s_5 = -40\\ 
+    x_1, s_4, s_5  && \Rightarrow && x_1 = 50, s_4 = 30, s_5 = -10 \\
+    x_2, s_3, s_4  && \Rightarrow && \text{No Solution} \\ 
+    x_2, s_3, s_5  && \Rightarrow && x_2 = 80, s_3 = 20, s_5 = 40\\
+    x_2, s_4, s_5  && \Rightarrow && x_2 = 100, s_4 = -20, s_5 = 40\\ 
+    s_3, s_4, s_5  && \Rightarrow && s_3 = 100, s_4 = 80, s_5 = 40 
+\end{align}
+Given our constraints, the following are the basic feasible solutions, the rest can be binned.
+\begin{align*}
+    (x_1,x_2,s_3,s_4,s_5)^T = (40, 20, 0, 20, 0)^T \\
+    (x_1,x_2,s_3,s_4,s_5)^T = (20, 60, 0, 0, 20)^T \\
+    (x_1,x_2,s_3,s_4,s_5)^T = (40, 0, 20, 20, 0)^T \\
+    (x_1,x_2,s_3,s_4,s_5)^T = (0, 80, 20, 0, 40)^T \\ 
+\end{align*}
+As for extreme points they are $(0,0),(0,80),(20,60),(40,20),(40,0)$ These are the vertices of our feasible region.
 \end{document}

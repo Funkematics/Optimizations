@@ -1,8 +1,8 @@
-PROG = Problem1
+PROG = NewtProb
 CC = gcc
 CFLAGS = -g -Wall -Wextra
 LDFLAGS = -lm
-SRCS = Problem1.c
+SRCS = NewtProb.c
 OBJS = $(SRCS:.c=.o)
 
 $(PROG): $(OBJS)

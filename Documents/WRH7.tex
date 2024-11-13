@@ -1,0 +1,87 @@
+\documentclass{article}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{tikz}
+\usepackage{parskip}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{fancyhdr}
+\usepackage[%paperheight = 59.4cm,
+            %paperwidth = 42cm,
+            %includehead,
+            nomarginpar,
+            textwidth=15cm,
+            headheight=10mm]{geometry}
+\usepackage{listings}
+\lstdefinestyle{CStyle}{
+    commentstyle=\color{teal},
+    keywordstyle=\color{violet},
+    numberstyle=\tiny\color{cyan},
+    stringstyle=\color{purple},
+    basicstyle=\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2,
+    language=C
+}
+\begin{document}
+ 
+\pagestyle{fancy}
+%\fancyhead{}\fancyfoot{}
+\AtBeginEnvironment{align}{\setcounter{equation}{0}} 
+\fancyhf[OHC]{Christopher Munoz WRH7 Optimization}
+\textbf{Problem 2.7} We are given the problem
+\begin{align*}
+    \text{minimize} \null \quad f(x_1,x_2) = (x_2 - x_1^2)(x_2-2x_1^2)
+\end{align*}
+And are tasked with showing the first and second-order necessary conditions for optimality are satisfied at $(0,0)^T$ (i), 
+showing that the origin is a local minimizer $f$ along any line passing through the origin $(x_2 = mx_1)$(ii) and to show that the origin is not local minimizer of $f$.
+
+(i) We first find the critical points by computing the gradient of $f(x_1, x_2)$:
+\begin{align*}
+    f(x_1,x_2) = (x_2 - x_1^2)(x_2-2x_1^2) = x_2^2 - 3x_1^2x_2 - 2x_1^4 \\
+    \frac{\partial f}{\partial x_1}  = -6x_1x_2 + 8x_1^3 \qquad \qquad  \frac{\partial f}{\partial x_2} = 2x_2 - 3x_1^2
+\end{align*}
+\begin{align*}
+    \null \nabla_f = \begin{bmatrix} -6x_1x_2 + 8x_1^3 \\ 2x_2 - 3x_1^2 \end{bmatrix} && 
+        \null \nabla_f (0,0) = \begin{bmatrix} -6(0)(0) + 8(0) \\ 2(0) - 3(0) \end{bmatrix} = 0
+\end{align*}
+Since $\nabla_f(0,0) = 0$, we satisfy the first order condition, now for the second order condition we find the hessian:
+\begin{align*}
+    \frac{\partial^2f}{\partial x_1^2} &= 24x_1^2 - 6x_2 && \frac{\partial^2f}{\partial x_1 \partial x_2} = -6x_1 \\ 
+    \frac{\partial^2f}{\partial x_2 \partial x_1} &= -6x_1 && \frac{\partial^2f}{\partial x_2^2} = 2 
+\end{align*}
+Evaluating for the $(0,0)^T$ and finding the eigenvalues we get:
+\begin{align*}\nabla_f^2 = 
+    \begin{bmatrix}
+     24x_1^2 - 6x_2 & -6x_1 \\ 
+    -6x_1 & 2 
+    \end{bmatrix} && 
+    \nabla_f^2(0,0) = 
+    \begin{bmatrix}
+    0 & 0 \\ 
+    0  & 2 
+    \end{bmatrix} \\
+    |\nabla_f^2(0,0) - \lambda I | = 
+    \begin{bmatrix}
+    0 & 0 \\ 
+    0  & 2 
+    \end{bmatrix} - 
+    \begin{bmatrix}
+        \lambda & 0 \\
+        0 & \lambda
+    \end{bmatrix} = 0 &&
+    \lambda(2-\lambda) = 0
+\end{align*}
+Now we can proceed to find the eigenvalues:
+\end{document}

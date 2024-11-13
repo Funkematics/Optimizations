@@ -263,7 +263,7 @@ Let $x$ be feasible for the primal problem and $y$ be feasible for the dual prob
 Now lets assume by contradiction that $x$ in our primal is not optimal, Then there exists an $\hat{x}$ such that $c^T\hat{x} < c^Tx$, since our $\hat{x}$ is feasible then by weak duality $b^Ty \leq c^T\hat{x}$ which implies that $c^Tx = b^Ty < c^T\hat{x}$. This contradicts $b^T\hat{y} > b^Ty$ leading to $b^T\hat{y} > b^Ty = c^Tx$, this contradicts weak duality $b^T\hat{y} \leq c^Tx$. Therefore $y$ must be optimal. Thus both x and y must be optimal for their respective problems. $\square$
 \newline
 
-\textbf{Problem 2.11}We will come back to this.
+\textbf{Problem 2.11} I need to come back to this
 
 \textbf{Problem 11} For this problem we run the kleeminty.m program in octave and get our maximum value in under 10 seconds using an n of $13$ in my case. There is an exponential growth in the number of iterations needed as n increases so even though we are well below 10 seconds, when we use an $n=14$ we are slightly above 10 seconds. The output of the last iteration as well as runtime are below:
 
@@ -319,5 +319,5 @@ The number of variables in standard form for $n$ is $2n+1$, in our case this is 
  40     end
  41 end    
 \end{lstlisting}
-We start buy adding artificial variables to our constraints A, each with a coefficient of 1. We then should use a simplex solver to minimize the sum of artificial variables. We know that we've found a solution if the sum of all artificial variables is zero, if any artificial variables are non-zero then the problem itself is infeasible or the program has failed.
+We start by adding artificial variables to our constraints A, each with a coefficient of 1. We then should use a simplex solver to minimize the sum of artificial variables. We know that we've found a solution if the sum of all artificial variables is zero, if any artificial variables are non-zero then the problem itself is infeasible or the program has failed.
 \end{document}
